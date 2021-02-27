@@ -1,0 +1,47 @@
+$header-bg: #3b2a4e;
+$color-point: #d22673;
+$karla: "Karla", sans-serif;
+$mark: "Marck Script";
+$text-white: #ffffff;
+
+
+.footer {
+    position: relative;
+  
+    display: block;
+  
+    grid-area: footer;
+  
+  
+    &__inner {
+      padding: 30px;
+  
+      grid-template-rows: 5fr 1fr 3fr;
+    }
+  
+    &__copywrites {
+      align-self: end;
+  
+      text-align: center;
+      text-transform: uppercase;
+  
+      color: $text-white;
+  
+      font-family: $karla;
+      font-size: 16px;
+    }
+  }
+  
+  
+  @media (max-width: 599px) {
+    .footer {
+      &__inner {
+        grid-template-rows: 6fr 1fr;
+      }
+  
+      &__copywrites {
+        font-size: 12px;
+      }
+    }
+  }
+  
