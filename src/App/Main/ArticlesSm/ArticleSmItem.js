@@ -1,9 +1,9 @@
 import React from "react"
-// import img from './img-travel.jpg'
+import {Link} from 'react-router-dom'
 
 
 const ArticleSmItem = ({
-    name, body, img
+    name, body, img, showPost
 }) => {
 
     const text = body.length > 250 ? body.substr(0, body.length - (body.length - 250)) + ' . . .' : body
@@ -20,7 +20,7 @@ const ArticleSmItem = ({
                 <p className="articles-sm__item-text">
                 {text}
                 </p>
-                <a href="/" className="btn-more">read more +</a>
+                <Link to="/postsm" onClick={() => showPost(name)} className="btn-more">read more +</Link>
         </div>
     )
   }

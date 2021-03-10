@@ -9,10 +9,10 @@ import Form from './Form/Form'
 class Header extends Component {
 
     state = {
-        isActive: false
+        isActive: false,
     }
 
-
+    
     onChangeClass= () => {
         this.setState((prevState) => {
             return {
@@ -22,22 +22,26 @@ class Header extends Component {
     }
 
     render() {
-    return (
-        <header className="header full-bg">
-            <div className="header__inner full-styles">
-                <Logo/>
-                <Burger
-                onChangeClass = {this.onChangeClass}
-                isActive = {this.state.isActive}
-                />
-                <Menu
-                 isActive = {this.state.isActive}
-                />
-                <Form/>
-            </div>
-        </header>
-    )
-  }
+        const {onUpdateSearch, updateTerm} = this.props
+        return (
+            <header className="header full-bg">
+                <div className="header__inner full-styles">
+                    <Logo/>
+                    <Burger
+                        onChangeClass = {this.onChangeClass}
+                        isActive = {this.state.isActive}
+                    />
+                    <Menu
+                        isActive = {this.state.isActive}
+                        updateTerm = {updateTerm}
+                    />
+                    <Form
+                        onUpdateSearch = {onUpdateSearch}
+                    />
+                </div>
+            </header>
+        )
+    }
 }
   
   export default Header;

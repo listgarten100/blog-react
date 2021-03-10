@@ -1,14 +1,14 @@
 import React from "react"
-// import img from './img-ads.jpg'
 
 
-const Ad = ({ad}) => {
+
+const Ad = ({img}) => {
     return (
             <section className="advertisement">
                 <div className="advertisement__inner">
                     <div className="advertisement__block">
                         <a href="/" className="advertisement__link"> 
-                            <img src={ad.img} alt="/" className="advertisement__img"/>
+                            <img src={img} alt="/" className="advertisement__img"/>
                         </a>     
                     </div>
                 </div>

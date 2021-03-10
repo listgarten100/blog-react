@@ -146,11 +146,12 @@ $text-white: #ffffff;
       position: relative;
   
       display: block;
+      justify-content: center; 
     }
   
     &__link {
       display: grid;
-  
+       
       grid-gap: 15px;
       grid-template-columns: 85px 1fr;
   
@@ -177,6 +178,12 @@ $text-white: #ffffff;
       font-family: $karla;
       font-size: 14px;
     }
+  }
+
+  .align-center {
+      display: grid;
+      width: 700px;
+      justify-self: center;
   }
   
   
