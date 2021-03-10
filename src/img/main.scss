@@ -116,29 +116,21 @@ $text-white: #ffffff;
     }
   
     &__title-tags--profile {
-    //   &::before {
-    //     display: inline-block;
+      &::before {
+        display: inline-block;
   
-    //     width: 20px;
-    //     height: 12px;
-    //     margin-right: 4px;
+        width: 20px;
+        height: 12px;
+        margin-right: 4px;
   
-    //     content: "";
+        content: "";
   
          
-    //     // background-image: url(./img/img-user.svg);
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-    //     background-size: 80%;
-    //   }
-    }
-
-    .articles__title-tags-img{
-         display: inline-block;
-  
-        width: 26px;
-        height: 16px;
-        margin-right: 4px;
+        background-image: url(../../../public/img/social/img-user.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+      }
     }
   
     &__title-tags--folder {

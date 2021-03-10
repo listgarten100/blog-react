@@ -7,6 +7,7 @@ import pinterest from '../../../img/img-pinterest.svg'
 import twitter from '../../../img/img-twitter.svg'
 import fb from '../../../img/img-fb.svg'
 
+import userImg from '../../../img/img-user.svg'
 
 class ArticleItem extends Component {
    
@@ -22,7 +23,10 @@ class ArticleItem extends Component {
                 <div className="articles__title">
                     <h3 className="articles__title-headline">{name}</h3>
                     <ul className="articles__title-tags">
-                    <li className="articles__title-tags--profile"><a href="/" className="articles__title-tags-link">{user}</a></li>
+                    <li className="articles__title-tags--profile">
+                        <img src={userImg} alt="user" className="articles__title-tags-img"/>
+                        <a href="/" className="articles__title-tags-link">{user}</a>
+                    </li>
                     <li className="articles__title-tags--folder"><Link to="/category" onClick={() => getFilterCategory(category)} className="articles__title-tags-link">{category}</Link></li>
                     <li className="articles__title-tags--comment"><a href="/" className="articles__title-tags-link">20 comment</a></li>
                     <li className="articles__title-tags--view"><a href="/" className="articles__title-tags-link">250 view</a></li>
