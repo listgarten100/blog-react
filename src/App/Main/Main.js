@@ -58,7 +58,7 @@ class Main extends Component {
         
         const profileSm = width < 600 ? <Profile/> : ''
         const categories = width < 600 ? <Categories/> : ''
-        
+
         return (
             <main className="main">
                 <Route path="/" exact render={() => {
@@ -110,6 +110,7 @@ class Main extends Component {
                  
                 }}/>
 
+    
     
                 <Route path="/about" exact render={() => (
                     <AboutMePage/>
