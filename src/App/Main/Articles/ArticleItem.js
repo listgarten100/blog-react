@@ -8,6 +8,9 @@ import twitter from '../../../img/img-twitter.svg'
 import fb from '../../../img/img-fb.svg'
 
 import userImg from '../../../img/img-user.svg'
+import folderImg from '../../../img/img-folder.svg'
+import commentImg from '../../../img/img-comment.svg'
+import viewImg from '../../../img/img-view.svg'
 
 class ArticleItem extends Component {
    
@@ -22,14 +25,23 @@ class ArticleItem extends Component {
                 <img src={img} alt="article" className="articles__img-item"/>
                 <div className="articles__title">
                     <h3 className="articles__title-headline">{name}</h3>
-                    <ul className="articles__title-tags">
-                    <li className="articles__title-tags--profile">
+                    <ul className="articles__title-tags-list">
+                    <li className="articles__title-tags">
                         <img src={userImg} alt="user" className="articles__title-tags-img"/>
                         <a href="/" className="articles__title-tags-link">{user}</a>
                     </li>
-                    <li className="articles__title-tags--folder"><Link to="/category" onClick={() => getFilterCategory(category)} className="articles__title-tags-link">{category}</Link></li>
-                    <li className="articles__title-tags--comment"><a href="/" className="articles__title-tags-link">20 comment</a></li>
-                    <li className="articles__title-tags--view"><a href="/" className="articles__title-tags-link">250 view</a></li>
+                    <li className="articles__title-tags">
+                    <img src={folderImg} alt="folder" className="articles__title-tags-img"/>
+                        <Link to="/category" onClick={() => getFilterCategory(category)} className="articles__title-tags-link">{category}</Link>
+                    </li>
+                    <li className="articles__title-tags">
+                        <img src={commentImg} alt="comment" className="articles__title-tags-img"/>
+                        <a href="/" className="articles__title-tags-link">20 comment</a>
+                    </li>
+                    <li className="articles__title-tags">
+                         <img src={viewImg} alt="view" className="articles__title-tags-img"/>
+                        <a href="/" className="articles__title-tags-link">250 view</a>
+                    </li>
                     </ul>
                     <div className="date-articles">
                     <p className="date-articles__day">14</p>
