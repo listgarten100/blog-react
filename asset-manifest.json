@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/blog-react/static/css/main.20da27f0.chunk.css",
-    "main.js": "/blog-react/static/js/main.76e7fc61.chunk.js",
-    "main.js.map": "/blog-react/static/js/main.76e7fc61.chunk.js.map",
+    "main.css": "/blog-react/static/css/main.af8c994f.chunk.css",
+    "main.js": "/blog-react/static/js/main.1b1a8d20.chunk.js",
+    "main.js.map": "/blog-react/static/js/main.1b1a8d20.chunk.js.map",
     "runtime-main.js": "/blog-react/static/js/runtime-main.171b82de.js",
     "runtime-main.js.map": "/blog-react/static/js/runtime-main.171b82de.js.map",
     "static/js/2.f1ed73ed.chunk.js": "/blog-react/static/js/2.f1ed73ed.chunk.js",
     "static/js/2.f1ed73ed.chunk.js.map": "/blog-react/static/js/2.f1ed73ed.chunk.js.map",
     "index.html": "/blog-react/index.html",
-    "static/css/main.20da27f0.chunk.css.map": "/blog-react/static/css/main.20da27f0.chunk.css.map",
+    "static/css/main.af8c994f.chunk.css.map": "/blog-react/static/css/main.af8c994f.chunk.css.map",
     "static/js/2.f1ed73ed.chunk.js.LICENSE.txt": "/blog-react/static/js/2.f1ed73ed.chunk.js.LICENSE.txt",
     "static/media/img-arrowLeft.bafb8356.svg": "/blog-react/static/media/img-arrowLeft.bafb8356.svg",
     "static/media/aside.scss": "/blog-react/static/media/img-man.203dd326.png",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.171b82de.js",
     "static/js/2.f1ed73ed.chunk.js",
-    "static/css/main.20da27f0.chunk.css",
-    "static/js/main.76e7fc61.chunk.js"
+    "static/css/main.af8c994f.chunk.css",
+    "static/js/main.1b1a8d20.chunk.js"
   ]
 }
