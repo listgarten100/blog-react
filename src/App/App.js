@@ -2,12 +2,11 @@ import React, { Component } from "react"
 import { Route } from "react-router"
 import "../common/style/reset.scss"
 import "../common/style/styles.scss"
-import articlesData, {getObjOfDataArr} from './Main/Articles/articlesData'
+import articlesData from './Main/Articles/articlesData'
 import articlesSmData from './Main/ArticlesSm/articlesSmData'
 
 
 import Header from './Header/Header'
-import SliderList from './Slider/SliderList'
 import Main from './Main/Main'
 import Aside from './Aside/Aside'
 import Footer from './Footer/Footer'
@@ -18,8 +17,6 @@ class App extends Component {
 
     state = {
         width: 0,
-        currentPost: '',
-        category: '',
         term: '' 
     }
 
@@ -44,11 +41,6 @@ class App extends Component {
     }
 
 
-    showPost = (post) => {
-        this.setState(() => ({
-            currentPost: post
-        })) 
-    }
 
     updateTerm = () => {
         this.setState(() => ({
@@ -57,11 +49,6 @@ class App extends Component {
     }
     
 
-    getFilterCategory = (category) => {
-        this.setState(() => ({
-            category: category
-        })) 
-    }
 
     searchPost = (items, term) => {
         if(term.length === 0) {
@@ -81,9 +68,6 @@ class App extends Component {
 
   
   render() {
-    const articlesDataObj = getObjOfDataArr(articlesData)
-    const articlesSmDataObj = getObjOfDataArr(articlesSmData)
-
     const visiblePosts = this.searchPost(articlesData, this.state.term)
     const visiblePostsSm = this.searchPost(articlesSmData, this.state.term)
 
@@ -96,24 +80,17 @@ class App extends Component {
                     />
                 )}/>
 
-                <Route path="/" exact component={SliderList}/>  
-
                 <div className="content">
                     <div className="wrapper">
                         <Route path="/" exact render={() => (
                                 <div className="content__inner">
                                     <Main
                                         width = {this.state.width}
-                                        showPost = {this.showPost}
-                                        getFilterCategory = {this.getFilterCategory}
                                         visiblePosts = {visiblePosts}
                                         visiblePostsSm = {visiblePostsSm}
                                     />
                                     <Aside
                                         width = {this.state.width}
-                                        getFilterCategory = {this.getFilterCategory}
-                                        showPost = {this.showPost}
-
                                     />
                             </div>
                         )}/>
@@ -121,19 +98,14 @@ class App extends Component {
                         <Route path="/categories" exact render={() => (
                             <Main
                                 width = {this.state.width}
-                                category = {this.state.category}
-                                getFilterCategory = {this.getFilterCategory}
                                 visiblePosts = {visiblePosts}
                                 visiblePostsSm = {visiblePostsSm}
                             />
                         )}/>
 
-                        <Route path="/category" exact render={() => (
+                        <Route path="/category/:category" exact render={() => (
                             <Main
                                 width = {this.state.width}
-                                category = {this.state.category}
-                                getFilterCategory = {this.getFilterCategory}
-                                showPost = {this.showPost}
                                 visiblePosts = {visiblePosts}
                                 visiblePostsSm = {visiblePostsSm}
                             />
@@ -142,11 +114,18 @@ class App extends Component {
                         <Route path="/recentposts" exact render={() => (
                             <Main
                                 width = {this.state.width}
-                                showPost = {this.showPost}
                                 visiblePosts = {visiblePosts}
                                 visiblePostsSm = {visiblePostsSm}
                             />
-                        )}/>  
+                        )}/>
+
+                        <Route path="/favorites" exact render={() => (
+                            <Main
+                                width = {this.state.width}
+                                visiblePosts = {visiblePosts}
+                                visiblePostsSm = {visiblePostsSm}
+                            />
+                        )}/>    
         
                         <Route path="/about" exact render={() => (
                             <Main
@@ -165,34 +144,28 @@ class App extends Component {
                         )}/>  
 
 
-                        <Route path="/post" exact render={() => (
+                        <Route path="/posts/:id" exact render={() => (
                             <div className="content__inner">
                                 <Main
-                                    post = {articlesDataObj[this.state.currentPost]}
-                                    getFilterCategory = {this.getFilterCategory}
+                                    width = {this.state.width}
                                     visiblePosts = {visiblePosts}
                                     visiblePostsSm = {visiblePostsSm}
                                 />
                                 <Aside
                                     width = {this.state.width}
-                                    getFilterCategory = {this.getFilterCategory}
-                                    showPost = {this.showPost}
                                     visiblePosts = {visiblePosts}
                                 />
                         </div>
                         )}/>
 
-                        <Route path="/postsm" exact render={() => (
+                        <Route path="/postssm/:id" exact render={() => (
                             <div className="content__inner">
                                 <Main
-                                    postSm = {articlesSmDataObj[this.state.currentPost]}
                                     visiblePosts = {visiblePosts}
                                     visiblePostsSm = {visiblePostsSm}
                                 />
                                 <Aside
                                     width = {this.state.width}
-                                    getFilterCategory = {this.getFilterCategory}
-                                    showPost = {this.showPost}
                                     visiblePosts = {visiblePosts}
                                 />
                             </div>

@@ -8,6 +8,78 @@ const articlesData = [
         user:"ADMIN",
         category:"lifestyle",
         img: "./img/articles/img-italy.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            },
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            },
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            },
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            },
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            },
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            },
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
     {
         id: nextId(),
@@ -16,6 +88,13 @@ const articlesData = [
         user:"ADMIN",
         category:"travel",
         img: "./img/articles/img-prague.jpg",
+        comments: [
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
    },
    {
         id: nextId(),
@@ -24,6 +103,23 @@ const articlesData = [
         user:"ADMIN",
         category:"nature",
         img: "./img/articles/img-bosnia.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            },
+            {
+                name: 'Vlad Listgarten',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a really good idea to visit this place!!!'  
+            }
+        ]
     },
     {
         id: nextId(),
@@ -32,6 +128,18 @@ const articlesData = [
         user:"ADMIN",
         category:"lifestyle",
         img: "./img/articlesSm/img-articlesSm3.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
 
     {
@@ -41,6 +149,18 @@ const articlesData = [
         user:"ADMIN",
         category:"travel",
         img: "./img/articlesSm/img-london.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
     {
         id: nextId(),
@@ -49,6 +169,18 @@ const articlesData = [
         user:"ADMIN",
         category:"photography",
         img: "./img/articlesSm/img-articlesSm1.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
     {
         id: nextId(),
@@ -57,6 +189,18 @@ const articlesData = [
         user:"ADMIN",
         category:"travel",
         img: "./img/articlesSm/img-articlesSm4.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
     {
         id: nextId(),
@@ -64,7 +208,19 @@ const articlesData = [
         body: "I love Italy, it’s become my favourite country to visit over the years and while travel has been on hold I’ve been waiting out for when we can return to Italy again. The food, the art, the architecture, the nature, the people – the reasons I’ve fallen in love with Italia are numerous and never-ending. These are just some of my favourite places, and experiences in Italy summed up in a few minutes – here’s to when we can explore this magical country again soon!",
         user:"ADMIN",
         category:"photography",
-        img: "./img/articles/img-italy.jpg"
+        img: "./img/articles/img-italy.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
     {
         id: nextId(),
@@ -73,6 +229,18 @@ const articlesData = [
         user:"ADMIN",
         category:"nature",
         img: "./img/articles/img-prague.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
     {
         id: nextId(),
@@ -81,6 +249,18 @@ const articlesData = [
         user:"ADMIN",
         category:"photography",
         img: "./img/articles/img-bosnia.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
     {
         id: nextId(),
@@ -89,13 +269,30 @@ const articlesData = [
         user:"ADMIN",
         category:"nature",
         img: "./img/articles/img-bosnia.jpg",
+        comments: [
+            {
+                name: 'John Doe',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'
+            },
+            {
+                name: 'John Smith',
+                email: 'listgarten100@gmail.com',
+                text: 'It is a big and small established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.'  
+            }
+        ]
     },
     
 ]
 
-export const getObjOfDataArr = array => array.reduce((obj, article) => ({
+export const getObjOfDataArrByName = array => array.reduce((obj, article) => ({
     ...obj,
     [article.name] : article
+}), {})
+
+export const getObjOfDataArrById = array => array.reduce((obj, article) => ({
+    ...obj,
+    [article.id] : article
 }), {})
 
 export default articlesData

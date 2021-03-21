@@ -20,6 +20,7 @@ const FlickrList = ({showPost}) => {
                                 if(counter < 9) {
                                     counter++
                                         flickrItem = <FlickrItem
+                                            id = {id}
                                             key = {id}
                                             img = {img}
                                             name = {name}

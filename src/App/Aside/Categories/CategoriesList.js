@@ -4,8 +4,7 @@ import categoriesData from './categoriesData'
 
 
 
-const CategoriesList = ({getFilterCategory}) => {
-
+const CategoriesList = () => {
     return ( 
             <section className="categories">
                 <div className="categories__inner">
@@ -16,7 +15,6 @@ const CategoriesList = ({getFilterCategory}) => {
                             <CategoriesItem
                                 key = {id}
                                 name = {name}
-                                getFilterCategory = {getFilterCategory}
                             />
                         ))
                     }

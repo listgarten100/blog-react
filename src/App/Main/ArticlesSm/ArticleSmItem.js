@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 const ArticleSmItem = ({
-    name, body, img, showPost
+    id, name, body, img
 }) => {
 
     const text = body.length > 250 ? body.substr(0, body.length - (body.length - 250)) + ' . . .' : body
@@ -15,12 +15,12 @@ const ArticleSmItem = ({
                     <p className="date-articles__month">february</p>
                 </div>
                 <h3 className="articles-sm__item-title">
-                {name}
+                    {name}
                 </h3>
                 <p className="articles-sm__item-text">
-                {text}
+                    {text}
                 </p>
-                <Link to="/postsm" onClick={() => showPost(name)} className="btn-more">read more +</Link>
+                <Link to={`/postssm/${id}`} className="btn-more">read more +</Link>
         </div>
     )
   }

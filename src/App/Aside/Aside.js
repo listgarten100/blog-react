@@ -1,7 +1,7 @@
 import React from "react"
 import "./aside.scss"
 import { Route } from "react-router"
-import {getObjOfDataArr} from '../Main/Articles/articlesData'
+import { getObjOfDataArrByName } from '../Main/Articles/articlesData'
 
 import Profile from './Profile/Profile'
 import RecentPostList from './RecentPosts/RecentPostList'
@@ -17,24 +17,20 @@ import videosData from './Video/videosData'
 
 
 
-const Aside = ({width, getFilterCategory, showPost}) => {
+const Aside = ({width}) => {
     
-    const decorDataObj = getObjOfDataArr(decorData)
-    const videosDataObj = getObjOfDataArr(videosData)
+    const decorDataObj = getObjOfDataArrByName(decorData)
+    const videosDataObj = getObjOfDataArrByName(videosData)
    
     const profile = width < 600 ? '' : <Profile/>
-    const categories = width < 600 ? '' : <CategoriesList
-    getFilterCategory = {getFilterCategory}
-    />
+    const categories = width < 600 ? '' : <CategoriesList/>
     return (
         <>
         <Route path="/" exact render={() => (
 
             <aside className="aside">
                 {profile}  
-                <RecentPostList
-                    showPost = {showPost}
-                />
+                <RecentPostList/>
                 {categories}
                 <Decor
                     decor = {decorDataObj['man']}
@@ -42,9 +38,7 @@ const Aside = ({width, getFilterCategory, showPost}) => {
                 <Video
                     video = {videosDataObj['bali']}
                 />
-                <FlickrList
-                    showPost = {showPost}
-                />
+                <FlickrList/>
                 <Video
                     video = {videosDataObj['to visit']}
                 />
@@ -58,13 +52,11 @@ const Aside = ({width, getFilterCategory, showPost}) => {
         
          )}/>
 
-         <Route path="/post" exact render={() => (
+         <Route path="/posts/:id" exact render={() => (
 
             <aside className="aside">
                 {profile}  
-                <RecentPostList
-                    showPost = {showPost}
-                />
+                <RecentPostList/>
                 {categories}
                 <Decor
                     decor = {decorDataObj['man']}
@@ -72,9 +64,7 @@ const Aside = ({width, getFilterCategory, showPost}) => {
                 <Video
                     video = {videosDataObj['bali']}
                 />
-                <FlickrList
-                    showPost = {showPost}
-                />
+                <FlickrList/>
                 <Video
                     video = {videosDataObj['to visit']}
                 />
@@ -88,13 +78,10 @@ const Aside = ({width, getFilterCategory, showPost}) => {
         
          )}/>
 
-            <Route path="/postsm" exact render={() => (
-
+            <Route path="/postssm/:id" exact render={() => (
             <aside className="aside">
                 {profile}  
-                <RecentPostList
-                    showPost = {showPost}
-                />
+                <RecentPostList/>
                 {categories}
                 <Decor
                     decor = {decorDataObj['man']}
@@ -102,9 +89,7 @@ const Aside = ({width, getFilterCategory, showPost}) => {
                 <Video
                     video = {videosDataObj['bali']}
                 />
-                <FlickrList
-                    showPost = {showPost}
-                />
+                <FlickrList/>
                 <Video
                     video = {videosDataObj['to visit']}
                 />

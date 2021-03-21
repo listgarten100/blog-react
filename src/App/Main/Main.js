@@ -4,6 +4,7 @@ import Pagination from "react-js-pagination";
 
 import "./main.scss"
 
+import SliderList from '../Slider/SliderList'
 import Profile from '../Aside/Profile/Profile'
 import Categories from '../Aside/Categories/CategoriesList'
 import ArticleList from './Articles/ArticleList'
@@ -42,7 +43,7 @@ class Main extends Component {
 
 
     render() {
-        const {width, visiblePosts, visiblePostsSm, showPost, getFilterCategory, category, post, postSm} = this.props
+        const {width, visiblePosts, visiblePostsSm} = this.props
 
         let currentDataArticles;
         let currentDataArticlesSm;
@@ -67,30 +68,25 @@ class Main extends Component {
                      <>
                         <ArticleList
                             posts = {currentDataArticles}
-                            showPost = {showPost}
-                            getFilterCategory = {getFilterCategory}
                         />
                         <ArticleSmList
                             posts = {currentDataArticlesSm}
-                            showPost = {showPost}
                         />
                     </>
                      )
                  } else {
                      return (
                         <>
+                        <SliderList/>
                         {profileSm}
                         {categories}
                         
                         <ArticleList
                             posts = {currentDataArticles}
-                            showPost = {showPost}
-                            getFilterCategory = {getFilterCategory}
                         />
 
                         <ArticleSmList
                             posts = {currentDataArticlesSm}
-                            showPost = {showPost}
                         />
 
                         <AdList
@@ -98,56 +94,51 @@ class Main extends Component {
                         />
                       
                         <Pagination
-                            activePage={this.state.currentPage}
-                            itemsCountPerPage={5}
-                            totalItemsCount={articlesData.length + articlesSmData.length/2 + adsData.length}
-                            pageRangeDisplayed={5}
-                            onChange={this.handlePageChange}
-                            />
-                        </>
+                            activePage = {this.state.currentPage}
+                            itemsCountPerPage = {5}
+                            totalItemsCount = {articlesData.length + articlesSmData.length/2 + adsData.length}
+                            pageRangeDisplayed = {5}
+                            onChange = {this.handlePageChange}
+                        />
+                    </>
                      )
                  }
                  
                 }}/>
-
-    
     
                 <Route path="/about" exact render={() => (
                     <AboutMePage/>
                 )}/>
 
                 <Route path="/categories" exact render={() => (
-                    <CategoriesPage
-                        getFilterCategory = {getFilterCategory}
-                    />
+                    <CategoriesPage/>
                 )}/>
 
-                <Route path="/category" exact render={() => (
+                <Route path="/category/:category" exact render={(props) => (
                     <ArticleList
-                        category = {category}
-                        getFilterCategory = {getFilterCategory}
-                        showPost = {showPost}
+                        {...props}
                     />
                 )}/>
 
-                <Route path="/post" exact render={() => (
+                <Route path="/posts/:id" exact render={(props) => (
                     <PostPageList
-                        post = {post}
-                        getFilterCategory = {getFilterCategory}
+                        {...props}
                     />
                 )}/>
 
                 
-                <Route path="/postsm" exact render={() => (
+                <Route path="/postssm/:id" exact render={(props) => (
                     <PostPageSmList
-                        postSm = {postSm}
+                        {...props}
                     />
                 )}/>
 
                 <Route path="/recentposts" exact render={() => (
-                    <RecentPostsPage
-                        showPost = {showPost} 
-                    />
+                    <RecentPostsPage/>
+                )}/>
+
+                <Route path="/favorites" exact render={() => (
+                    <ArticleList/>
                 )}/>
 
                 <Route path="/contact" exact render={() => (

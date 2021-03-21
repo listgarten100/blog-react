@@ -3,10 +3,9 @@ import RecentPostList from "../../Aside/RecentPosts/RecentPostList"
 
 
 
-const RecentPostsPage = ({showPost}) => {
+const RecentPostsPage = () => {
     return (
         <RecentPostList
-            showPost = {showPost}
             classname = {'align-center'}
         />
     )

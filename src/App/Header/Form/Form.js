@@ -36,7 +36,9 @@ class Form extends Component {
                         onChange = {this.onUpdateSearch}
                         value={this.state.term}
                     />
-                    <a className="form__btn" href="/"><img className="form__img" src={search} alt="search"/></a>
+                    <a className="form__btn" href="/">
+                        <img className="form__img" src={search} alt="search"/>
+                    </a>
                 </fieldset>
             </form>
         )

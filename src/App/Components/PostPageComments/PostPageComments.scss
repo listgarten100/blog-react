@@ -1,0 +1,212 @@
+$header-bg: #3b2a4e;
+$color-point: #d22673;
+$karla: "Karla", sans-serif;
+$mark: "Marck Script";
+$text-white: #ffffff;
+
+.comments{
+    display: block;
+    position: relative;
+    background-color: #ecebec;
+
+    &__inner{
+        display: block;
+        position: relative;
+    }
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 3px solid $color-point;
+    }
+
+    &__count{
+        font-family: $karla;
+        font-size: 18px;
+        color: #555555;
+        margin-left: 80px;
+    }
+
+    &__btn-leave{
+        display: flex;
+        align-items: center;
+        width: 180px;
+        height: 30px;
+        border: none;
+        // border: $color-point;
+        // border-left: 4px solid $color-point;
+        background-color: $header-bg;
+        color: $text-white;
+        font-size: 14px;
+        font-family: $karla;
+        margin-right: 40px;
+        border-radius: 3px;
+        cursor: pointer;
+
+        &::before {
+            width: 6px;
+            height: 30px;
+            margin-right: 15px;
+            margin-left: -10px;
+        
+            content: "";
+            transition: all 0.3s ease-out;
+        
+            background-color: $color-point;
+          }
+        
+          &:hover {
+            &::before {
+              width: 20px;
+              margin-left: -14px;
+        
+              transition: all 0.3s ease-out;
+            }
+          }
+    }
+
+    &__list{
+        display: block;
+        position: relative;
+    }
+
+    &__item{
+        display: grid;
+        grid-gap: 20px;
+        border-bottom: 1px solid #b8b7b7;
+        padding: 30px 20px;
+    }
+
+    &__item-top{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name{
+        font-size: 15px;
+        font-family: $karla;
+        color: $color-point;
+        margin-left: 40px;
+        font-weight: 700;
+    }
+
+    &__email{
+        font-size: 13px;
+        color: #969696;
+        margin-left: 5px;
+    }
+
+    &__date{
+        font-size: 14px;
+        font-family: $karla;
+        color: #555555;
+    }
+
+    &__item-bottom{
+        display: block;
+    }
+
+    &__text{
+        width: 750px;
+        font-size: 14px;
+        font-family: $karla;
+        color: #000;
+        text-indent: 20px;
+    }
+
+    &__leave-comment{
+        display: block;
+        position: relative;
+        margin-top: 60px;
+    }
+
+    &__title-leave{
+        width: 100%;
+        height: 35px;
+        font-size: 18px;
+        font-family: $karla;
+        color: #000;
+        border-bottom: 3px solid $color-point;
+        padding-left: 20px;
+    }
+
+    &__form{
+        display: block;
+        position: relative;
+        margin-top: 30px;
+    }
+
+    &__fieldset{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        padding: 10px 0 10px 10px;
+    }
+
+    &__input{
+        width: 270px;
+        height: 35px;
+        background-color: #fff;
+        color: #000;
+        font-size: 14px;
+        font-family: $karla;
+        padding-left: 12px;
+        border: 1px solid $header-bg;
+    }
+
+    &__input--name{
+        grid-column: 1/2;
+    }
+
+    &__input--email{
+        grid-column: 1/2;
+        align-self: end;
+    }
+
+    &__textarea{
+        
+        grid-column: 2/3;
+        grid-row: 1/3;
+        width: 470px;
+        height: 80px;
+        background-color: #fff;
+        color: #000;
+        font-size: 14px;
+        font-family: $karla;
+        padding-top: 10px;
+        padding-left: 25px;
+        resize: none;
+        border: 1px solid $header-bg;
+    }
+
+    &__btn-submit{
+        // display: grid;
+        grid-column: 2/3;
+        justify-self: end;
+        text-align: center;
+        width: 140px;
+        height: 40px;
+        color: #ffffff;
+        background-color: #3b2a4e;
+        font-family: "Karla", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        border: none;
+        border-bottom: 3px solid $color-point;
+        border-radius: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+        
+        transition: all 0.3s ease-out;
+
+        &:hover{
+            border-bottom: 9px solid $color-point;
+            
+            transition: all 0.3s ease-out;
+        }
+      
+    }
+
+}

@@ -1,11 +1,10 @@
-import React, { Component } from "react"
+import React from "react"
 
 
-class Burger extends Component{
+const Burger = ({
+    onChangeClass, isActive
+}) => {
 
-   
-    render() {
-        const {onChangeClass, isActive} = this.props
         let className = 'burger'
         if(isActive) className += ' active'
 
@@ -16,7 +15,6 @@ class Burger extends Component{
                 <span></span>
             </div>
     )
-    }
   }
   
   export default Burger;

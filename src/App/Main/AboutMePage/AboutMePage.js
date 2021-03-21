@@ -17,7 +17,7 @@ const AboutMePage = () => {
                 <h3 className="aboutMe__greeting">
                     Hello, I am <span className="aboutMe__name">HANNAH ROBINSON</span>
                 </h3>
-                <img src={userImg} className="aboutMe__img"></img>
+                <img src={userImg} className="aboutMe__img" alt="user"></img>
                 <p className="aboutMe__text aboutMe__text--italic">I’m an adventure travel blogger, photographer & digital nomad who’s been exploring the world for over 10-years.</p>
                 <p className="aboutMe__text">Welcome to my travel blog! This is where I share entertaining stories, <span className="aboutMe__text--highlighted">budget travel tips</span>, fun YouTube videos, inspiring <span className="aboutMe__text--highlighted">travel photography</span>, advice on nomadic living, and plenty of outdoor adventures with you from my travels around the world.</p>
                 <p className="aboutMe__text aboutMe__text--bold">It’s a place for people like you who are looking for daily inspiration & motivation to live a life full of adventure.</p>

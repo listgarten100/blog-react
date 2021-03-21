@@ -3,13 +3,9 @@ import CategoriesList from '../../Aside/Categories/CategoriesList';
 
 
 
-const CategoriesPage = ({category, getFilterCategory, showPost}) => {
+const CategoriesPage = () => {
     return (
-        <CategoriesList
-            category = {category}
-            getFilterCategory = {getFilterCategory}
-            showPost = {showPost}
-        />
+        <CategoriesList/>
     )
 }
 

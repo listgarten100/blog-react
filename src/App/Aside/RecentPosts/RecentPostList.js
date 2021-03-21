@@ -5,7 +5,7 @@ import articlesData from '../../Main/Articles/articlesData'
 
 
 
-const RecentPostList = ({showPost, classname}) => {
+const RecentPostList = ({classname}) => {
     let counter = 0;
     
     return (
@@ -19,10 +19,10 @@ const RecentPostList = ({showPost, classname}) => {
                             if(counter < 5) {
                                 counter++
                                 recentPost = <RecentPostItem
+                                    id = {id}
                                     key = {id}
                                     name = {name}
                                     body = {body}
-                                    showPost = {showPost}
                                     classname = {classname}
                                 />
                             }
